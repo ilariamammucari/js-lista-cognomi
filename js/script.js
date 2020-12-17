@@ -15,12 +15,19 @@ cognomi.push(cognomeUtente);
 
 
 // stampo in ordine alfabetico i cognomi
-document.getElementById('lista-cognomi').innerHTML += cognomi.sort();
+document.getElementById('lista-cognomi').innerHTML += cognomi;
 
-// indico la posizione umana del cognome inserito dall'utente
+var pulsanteProva = document.getElementById('prova');
+pulsanteProva.addEventListener('click',
+function() {
+  document.getElementById('lista-ordinata').innerHTML += cognomi.sort();
+
+
+  // indico la posizione umana del cognome inserito dall'utente
 for (var i = 0; i < cognomi.length; i++) {
   if (cognomeUtente == cognomi[i]) {
     document.getElementById('cognome-utente').innerHTML += ++i + ' di';
     document.getElementById('totalecognomi').innerHTML = cognomi.length + ' cognomi!';
   }
 }
+});
