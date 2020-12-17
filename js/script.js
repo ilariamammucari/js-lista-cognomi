@@ -11,6 +11,8 @@ var cognomi = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'];
 var cognomeUtente = prompt('Inserisci il tuo cognome');
 // controllo che la lettera del cognome inserito sia maiuscola e il resto minuscolo
 cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.substr(1).toLowerCase();
+
+// aggiungo all'arrey il cognome
 cognomi.push(cognomeUtente);
 
 
@@ -31,4 +33,7 @@ for (var i = 0; i < cognomi.length; i++) {
     document.getElementById('totalecognomi').innerHTML = cognomi.length + ' cognomi!';
   }
 }
+
+document.getElementById('prova').className = 'hidden';
+
 });
