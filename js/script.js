@@ -19,9 +19,8 @@ document.getElementById('lista-cognomi').innerHTML += cognomi.sort();
 
 // indico la posizione umana del cognome inserito dall'utente
 for (var i = 0; i < cognomi.length; i++) {
-  // console.log(cognomi[i]);
   if (cognomeUtente == cognomi[i]) {
-    document.getElementById('cognome-utente').innerHTML += ++i;
+    document.getElementById('cognome-utente').innerHTML += ++i + ' di';
+    document.getElementById('totalecognomi').innerHTML = cognomi.length + ' cognomi!';
   }
-
 }
