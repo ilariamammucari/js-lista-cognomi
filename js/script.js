@@ -16,6 +16,7 @@ cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.substr(1).
 cognomi.push(cognomeUtente);
 
 
+
 var pulsanteAggiungi = document.getElementById('aggiungi');
 pulsanteAggiungi.addEventListener('click',
 function() {
@@ -24,8 +25,8 @@ function() {
   cognomeDue = cognomeDue.charAt(0).toUpperCase() + cognomeDue.substr(1).toLowerCase();
   cognomi.push(cognomeDue);
 
-  document.getElementById('lista-cognomi').innerHTML += cognomeDue;
-
+  document.getElementById('lista-cognomi').innerHTML += ',' + cognomi[cognomi.length - 1];
+  
 });
 
 // stampo i cognomi
