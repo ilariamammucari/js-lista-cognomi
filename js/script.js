@@ -16,9 +16,20 @@ cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.substr(1).
 cognomi.push(cognomeUtente);
 
 
+var pulsanteAggiungi = document.getElementById('aggiungi');
+pulsanteAggiungi.addEventListener('click',
+function() {
+
+  var cognomeDue = prompt('Inserisci un altro cognome');
+  cognomeDue = cognomeDue.charAt(0).toUpperCase() + cognomeDue.substr(1).toLowerCase();
+  cognomi.push(cognomeDue);
+
+  document.getElementById('lista-cognomi').innerHTML += cognomeDue;
+
+});
+
 // stampo i cognomi
 document.getElementById('lista-cognomi').innerHTML += cognomi;
-
 
 // aggiungo pulsante per metterli in ordine alfabetico
 var pulsanteProva = document.getElementById('prova');
@@ -34,6 +45,7 @@ for (var i = 0; i < cognomi.length; i++) {
   }
 }
 
-document.getElementById('prova').className = 'hidden';
+// bottone prova scompare
+// document.getElementById('prova').className = 'hidden';
 
 });
