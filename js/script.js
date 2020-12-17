@@ -14,14 +14,15 @@ cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.substr(1).
 cognomi.push(cognomeUtente);
 
 
-// stampo in ordine alfabetico i cognomi
+// stampo i cognomi
 document.getElementById('lista-cognomi').innerHTML += cognomi;
 
+
+// aggiungo pulsante per metterli in ordine alfabetico
 var pulsanteProva = document.getElementById('prova');
 pulsanteProva.addEventListener('click',
 function() {
   document.getElementById('lista-ordinata').innerHTML += cognomi.sort();
-
 
   // indico la posizione umana del cognome inserito dall'utente
 for (var i = 0; i < cognomi.length; i++) {
